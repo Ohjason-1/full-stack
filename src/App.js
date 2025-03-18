@@ -1,9 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Navbar from './components/Navbar/Navbar';
+import Home from './pages/Home/home';
+import NotHome from './pages/NotHome/nothome';
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -17,6 +20,11 @@ function App() {
         >
           Learn React
         </a>
+        
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/nothome" element={<NotHome />} />
+      </Routes>
       </header>
     </div>
   );
